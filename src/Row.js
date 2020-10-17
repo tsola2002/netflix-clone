@@ -34,12 +34,16 @@ function Row({ title, fetchUrl}) {
     let moviesToRender;
     if(movies) {
         moviesToRender = movies.map(movie => {
-            return <img key={movie.id} className="row__poster" src={`${base_url}${movie.poster_path}`} alt={movie.name} />;
+            return <img 
+            key={movie.id}
+            className="row__poster"
+            src={`${base_url}${movie.poster_path}`}
+            alt={movie.name} />;
         })
     }
     
     // you test to see dat setmovies function is working well
-    //console.log(movies);
+    console.log(movies);
     //console.table(movies);
    
 
