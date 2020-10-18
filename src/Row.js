@@ -9,7 +9,7 @@ import movieTrailer from 'movie-trailer';
 const base_url = "https://image.tmdb.org/t/p/original/";
 //const base_url = "https://api.themoviedb.org/3/movie";
 
-function Row({ title, fetchUrl}) {
+function Row({ title, fetchUrl, isLargeRow}) {
     // we create a react state using react hooks
     //useState is a react hook(hooks are react functional codes)
     //we create an empty movie array
@@ -69,7 +69,7 @@ function Row({ title, fetchUrl}) {
             key={movie.id}
             onClick={() => handleClick(movie)}     
             className="row__poster"
-            src={`${base_url}${movie.poster_path}`}
+            src={`${base_url}${movie.backdrop_path}`}
             alt={movie.name} />;
         })
     }
